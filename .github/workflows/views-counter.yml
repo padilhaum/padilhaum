@@ -13,12 +13,16 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Update Views Counter
+    - name: Create Badge Directory
       run: |
-        count=$(curl -s https://api.github.com/repos/padilhaum/padilhaum/views | jq '.count')
+        # Cria o diretório onde o badge será salvo, caso não exista
+        mkdir -p ./badge
+
+    - name: Fetch Views Count
+      run: |
+        count=$(curl -s "https://api.github.com/repos/padilhaum/padilhaum/traffic/views" | jq '.count')
         echo "views=$count" >> $GITHUB_ENV
 
     - name: Update Badge
       run: |
-        curl -s "https://img.shields.io/badge/views-${{ env.views }}-blue" > ./views-badge.svg
-        mv ./views-badge.svg ./badge/views-badge.svg
+        curl -s "https://img.shields.io/badge/views-${{ env.views }}-blue" > ./badge/views-badge.svg
