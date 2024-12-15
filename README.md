@@ -6,4 +6,4 @@
 - ⚛️ **React.js**
 
 
-![Contador de Visualizações](https://profile-counter.glitch.me/DanielPadilha/count.svg)
+![Profile views](https://gpvc.arturio.dev/[padilhaum])
