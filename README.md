@@ -6,4 +6,4 @@
 - ⚛️ **React.js**
 
 
-![Profile views](https://gpvc.arturio.dev/[padilhaum])
+![Views Badge](https://img.shields.io/github/watchers/padilhaum/padilhaum?label=views&style=social)
