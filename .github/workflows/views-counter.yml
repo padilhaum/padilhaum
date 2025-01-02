@@ -15,7 +15,6 @@ jobs:
 
     - name: Create Badge Directory
       run: |
-        # Cria o diretório onde o badge será salvo, caso não exista
         mkdir -p ./badge
 
     - name: Fetch Views Count
